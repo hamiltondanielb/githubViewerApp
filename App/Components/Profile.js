@@ -17,7 +17,7 @@ class Profile extends Component {
   render() {
     const userInfo = this.props.userInfo;
     const topicArr = ['company', 'location', 'followers', 'following', 'email',
-                    'bio', 'public_repos'];
+                    'bio','websiteurl', 'public_repos'];
     const list = topicArr.map((item, index) => {
       if(!userInfo[item]) {
         return <View key={index} />
