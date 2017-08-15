@@ -17,6 +17,7 @@ const Badge = (props) => {
       />
       <Text style={styles.name}> {props.userInfo.name} </Text>
       <Text style={styles.handle}> {props.userInfo.login} </Text>
+      <Text style={styles.handle}> {props.userInfo.hireable ? 'Hire Me': ''} </Text>
     </View>
   )
 }

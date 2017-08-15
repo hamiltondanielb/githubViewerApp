@@ -11,13 +11,13 @@ import Separator from './helpers/Separator';
 
 class Profile extends Component {
   getRowTitle(values) {
-    const item = (values === 'public_repos') ? values.replace('_', ' ') : values;
+    const item = (values === 'public_repos' || values === 'public_gists') ? values.replace('_', ' ') : values;
     return item[0] ? item[0].toUpperCase() + item.slice(1) : item;
   }
   render() {
     const userInfo = this.props.userInfo;
     const topicArr = ['company', 'location', 'followers', 'following', 'email',
-                    'bio','websiteurl', 'public_repos'];
+                    'bio','blog', 'public_repos', 'public_gists'];
     const list = topicArr.map((item, index) => {
       if(!userInfo[item]) {
         return <View key={index} />
